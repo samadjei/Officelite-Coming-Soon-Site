@@ -1,0 +1,38 @@
+@import '../abstracts/variables';
+
+.btn {
+	position: relative;
+	padding: 1.2rem 2.4rem;
+	border: none;
+	outline: none;
+	font-weight: 1.2rem;
+	cursor: pointer;
+	background-color: $pureBlack;
+	color: $pureWhite;
+	text-transform: uppercase;
+	&:hover,
+	&:focus {
+		color: $pureBlack;
+		background-color: $lightGrey;
+	}
+}
+
+// .btn--primary {
+// 	background-color: $pureBlack;
+// }
+
+// .btn--outline {
+// 	color: $pureWhite;
+// 	padding: 12px 25px;
+// 	transition: all 0.3s ease-in;
+// 	&:hover,
+// 	&:focus {
+// 		color: $pureBlack;
+// 		background-color: $lightGrey;
+// 	}
+// }
+
+// .btn--desktop {
+// 	padding: 16px 26px;
+// 	font-size: 20px;
+// }
