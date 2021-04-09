@@ -1,7 +1,20 @@
-@import 'layout/navbar.scss';
-@import 'layout/home.scss';
+@import "abstracts/breakpoints";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-@import 'component/button.scss';
+@import "base/reset";
+@import "base/typography";
+
+@import "component/button";
+
+@import "layout/footer";
+@import "layout/hero";
+@import "layout/navbar";
+
+@import 'pages/home';
+@import 'pages/signup';
+
+// @import 'component/button.scss';
 
 *,
 *::after,
@@ -18,9 +31,8 @@ html {
 }
 
 body {
-	font-family: 'DM SANS', sans-serif;
-	font-size: 15px;
-	line-height: 2.4;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 1.6rem;
 }
 
 a {
@@ -47,4 +59,3 @@ img {
 	margin: 0 auto;
 	overflow: hidden;
 }
-
