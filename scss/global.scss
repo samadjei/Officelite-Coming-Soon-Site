@@ -1,15 +1,15 @@
-@import "abstracts/breakpoints";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+// @import 'abstracts/breakpoints';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/reset";
-@import "base/typography";
+@import 'base/reset';
+@import 'base/typography';
 
-@import "component/button";
+@import 'component/button';
 
-@import "layout/footer";
-@import "layout/hero";
-@import "layout/navbar";
+@import 'layout/footer';
+@import 'layout/hero';
+@import 'layout/navbar';
 
 @import 'pages/home';
 @import 'pages/signup';

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-// import Hero from './components/hero';
+import Homepage from './homepage';
 
 export default function Home() {
 	return (
@@ -8,7 +8,7 @@ export default function Home() {
 				<title>Homepage</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
-			{/* <Hero /> */}
+			<Homepage />
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 @import '../abstracts/variables';
-@import '../abstracts/breakpoint';
+@import '../abstracts/breakpoints';
 
 h1 {
 	font-size: 5.6rem;
@@ -23,7 +23,7 @@ p {
 	font-weight: normal;
 	font-size: 1.8rem;
 	line-height: 2.8rem;
-	@include breakpoint('>=tablet') {
+	@include media('>=tablet') {
 		font-size: 1.6rem;
 		line-height: 2.8rem;
 	}
