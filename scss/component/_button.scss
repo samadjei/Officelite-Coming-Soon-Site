@@ -28,11 +28,11 @@
 
 .btn--secondary {
 	color: $blue;
-	background-color: $lightBlue;
+	background-color: $buttonSecondary;
 	&:hover,
 	&:focus {
 		color: $blue;
-		background-color: $lightBlue;
+		background-color: $buttonSecondary;
 	}
 }
 
