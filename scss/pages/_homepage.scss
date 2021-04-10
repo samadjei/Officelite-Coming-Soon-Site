@@ -1,0 +1,27 @@
+// LOGO
+.logo {
+	height: 8rem;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+// HERO
+.hero {
+	padding: 0 4rem;
+	&__content {
+		max-width: 54rem;
+		height: 38.8rem;
+		text-align: left;
+	}
+	&--title {
+		margin: 0;
+	}
+	&--para {
+		padding-top: 2.4rem;
+		padding-right: 4rem;
+	}
+	&--btn {
+		padding-top: 3.2rem;
+	}
+}
