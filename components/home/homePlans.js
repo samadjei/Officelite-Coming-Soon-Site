@@ -23,7 +23,7 @@ export default function homePlans() {
 					<p className="plans--billing">Per user, billed monthly</p>
 					<div className="plans--info">
 						<p>All essential integrations</p>
-						<p>50 gb storage</p>
+						<p>50 GB storage</p>
 						<p>More control and insights</p>
 					</div>
 					<Button className="btn" buttonStyle="btn--tertiary" buttonSize="btn--desktop">
@@ -36,7 +36,7 @@ export default function homePlans() {
 					<p className="plans--billing">Per user, billed monthly</p>
 					<div className="plans--info">
 						<p>Robust work management</p>
-						<p>100 gb storage</p>
+						<p>100 GB storage</p>
 						<p>VIP support</p>
 					</div>
 					<Button className="btn" buttonStyle="btn--secondary" buttonSize="btn--desktop">

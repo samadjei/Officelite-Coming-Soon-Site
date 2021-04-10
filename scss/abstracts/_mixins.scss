@@ -1,6 +1,5 @@
-@mixin container {
-	width: 1440px;
-	max-width: 100%;
-	margin: 0 auto;
-	overflow: hidden;
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
