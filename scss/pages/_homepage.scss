@@ -1,18 +1,41 @@
 // LOGO
 .logo {
-	height: 8rem;
+	// height: 8rem;
+	padding-top: 8rem;
 	display: flex;
-	justify-content: start;
+	justify-content: flex-start;
 	align-items: center;
+}
+
+// Background Pattern
+.main {
+	position: relative;
+	// Background Pattern image
+	&::after {
+		position: absolute;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('../../public/assets/home/bg-pattern-header.svg');
+		width: 120.2rem;
+		height: 120.2rem;
+		bottom: 10rem;
+		left: 47%;
+		content: '';
+		z-index: 0;
+	}
 }
 
 // HERO
 .hero {
-	padding: 0 4rem;
+	padding-top: 11rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	&__content {
 		max-width: 54rem;
 		height: 38.8rem;
 		text-align: left;
+		z-index: 1;
 	}
 	&--title {
 		margin: 0;
@@ -20,8 +43,10 @@
 	&--para {
 		padding-top: 2.4rem;
 		padding-right: 4rem;
+		padding-bottom: 3.2rem;
 	}
-	&--btn {
-		padding-top: 3.2rem;
+
+	&__image {
+		z-index: 1;
 	}
 }

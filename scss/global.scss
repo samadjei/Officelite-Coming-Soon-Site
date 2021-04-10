@@ -54,8 +54,10 @@ img {
 }
 
 .container {
-	width: 1440px;
+	width: 111rem;
 	max-width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
