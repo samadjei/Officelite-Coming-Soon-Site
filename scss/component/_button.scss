@@ -6,8 +6,9 @@
 	border-radius: 2.8rem;
 	outline: none;
 	border: none;
-	cursor: pointer;
-	text-transform: uppercase;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 // BUTTON STYLES
@@ -17,6 +18,7 @@
 	color: $white;
 	background-color: $blue;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	transition: all 0.3s ease-out;
 	&:hover,
 	&:focus {
 		color: $white;
@@ -29,10 +31,11 @@
 .btn--secondary {
 	color: $blue;
 	background-color: $buttonSecondary;
+	transition: all 0.3s ease-out;
 	&:hover,
 	&:focus {
 		color: $blue;
-		background-color: $buttonSecondary;
+		background-color: $buttonSecondaryHover;
 	}
 }
 
@@ -40,6 +43,7 @@
 .btn--tertiary {
 	color: $blue;
 	background-color: $white;
+	transition: all 0.3s ease-out;
 	&:hover,
 	&:focus {
 		color: $lightBlue;
