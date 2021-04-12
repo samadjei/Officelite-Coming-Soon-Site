@@ -10,20 +10,26 @@
 // Background Pattern
 .main {
 	position: relative;
-
+	// overflow: hidden;
 	// Background Pattern image
 	&::after {
+		content: '';
+		display: block;
 		position: absolute;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-image: url('../../public/assets/home/bg-pattern-header.svg');
-		width: 120.2rem;
-		height: 120.2rem;
+		width: 113.4rem;
+		height: 113.4rem;
 		top: -60rem;
-		left: 47%;
-		content: '';
+		left: 48%;
 		z-index: 0;
 	}
+}
+
+// I'm not sure how its doing it but this has removed the x axis overflow caused by the header background above!
+#__next {
+	overflow: hidden;
 }
 
 // HERO
@@ -66,7 +72,7 @@
 
 	&__basic {
 		background-color: $white;
-		box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+		box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.25);
 		border-radius: 1.3rem;
 		margin-right: 3rem;
 	}
@@ -74,8 +80,20 @@
 	&__pro {
 		position: relative;
 		background-color: $blue;
-		box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+		box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.25);
 		border-radius: 1.3rem;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url('../../public/assets/home/bg-pattern-pricing.svg');
+			width: 88rem;
+			height: 88rem;
+			top: -40rem;
+		}
 
 		.head--white {
 			color: $white;
@@ -85,21 +103,13 @@
 			color: $white;
 			z-index: 1;
 		}
-
-		&::after {
-			position: absolute;
-			content: '';
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-image: url('../../public/assets/home/bg-pattern-pricing.svg');
-			z-index: 0;
-		}
 	}
 
 	&__ultimate {
 		background-color: $white;
+
 		border-radius: 1.3rem;
-		box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+		box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.25);
 		margin-left: 3rem;
 	}
 
@@ -111,6 +121,7 @@
 		max-width: 35rem;
 		height: 100%;
 		padding: 4rem 6.4rem;
+		z-index: 999;
 	}
 
 	&--type {
@@ -141,9 +152,28 @@
 
 // COUNTDOWN
 .countdown {
+	position: relative;
 	background: $darkBlue;
+	margin-top: -25rem;
 	padding-top: 35rem;
 	padding-bottom: 9rem;
+	height: 60rem;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url('../../public/assets/home/bg-pattern-footer.svg');
+		background-position: left center;
+		width: 203rem;
+		height: 203rem;
+		top: -60rem;
+		right: 34rem;
+		z-index: 0;
+	}
+
 	&__inner {
 		display: flex;
 		flex-direction: column;
@@ -154,6 +184,7 @@
 	&__coming--soon {
 		letter-spacing: 0.5rem;
 		margin-bottom: 2rem;
+		color: $white;
 	}
 
 	&--days {
@@ -174,6 +205,7 @@
 			border-radius: 1.3rem;
 			max-width: 10rem;
 			height: 12.8rem;
+			z-index: 3;
 		}
 		&--number {
 			font-size: 5.6rem;
@@ -191,4 +223,10 @@
 			margin-top: 0.3rem;
 		}
 	}
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

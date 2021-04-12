@@ -10,14 +10,14 @@ export default function homePlans() {
 					<p className="plans--billing">Up to 5 users for free</p>
 					<div className="plans--info">
 						<p>Basic document collaboration</p>
-						<p>2 gb storage</p>
+						<p>2 GB storage</p>
 						<p>Great security and support</p>
 					</div>
 					<Button className="btn" buttonStyle="btn--secondary" buttonSize="btn--desktop">
 						Try for Free
 					</Button>
 				</div>
-				<div className="plans__pro plans--card">
+				<div className="plans__pro plans--card plans--blue">
 					<h2 className="plans--type head--white">Pro</h2>
 					<h3 className="plans--price">$9.99</h3>
 					<p className="plans--billing">Per user, billed monthly</p>

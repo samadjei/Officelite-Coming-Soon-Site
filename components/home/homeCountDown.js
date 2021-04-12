@@ -52,31 +52,39 @@ const countDown = () => {
 	});
 
 	return (
-		<section className="countdown container">
-			<div className="countdown__inner">
-				{/* Set 30 days in the future from the moment the visitor views the page */}
-				<div className="countdown__day">
-					<h3 className="countdown__coming--soon">
-						Coming <span className="countdown--days">9 Nov 2021</span>{' '}
-					</h3>
+		<section className="countdown">
+			<div className="countdown__bg"></div>
+			<div className="container flex">
+				<div className="countdown__inner">
+					{/* Set 30 days in the future from the moment the visitor views the page */}
+					<div className="countdown__day">
+						<h3 className="countdown__coming--soon">
+							Coming <span className="countdown--days">9 Nov 2021</span>{' '}
+						</h3>
+					</div>
+					<div className="countdown__timer">
+						<div className="countdown__timer--card">
+							<p className="countdown__timer--number">{timerDays}</p>
+							<p className="countdown__timer--desc">days</p>
+						</div>
+						<div className="countdown__timer--card">
+							<p className="countdown__timer--number">{timerHours}</p>
+							<p className="countdown__timer--desc">hours</p>
+						</div>
+						<div className="countdown__timer--card">
+							<p className="countdown__timer--number">{timerMinutes}</p>
+							<p className="countdown__timer--desc">min</p>
+						</div>
+						<div className="countdown__timer--card">
+							<p className="countdown__timer--number">{timerSeconds}</p>
+							<p className="countdown__timer--desc">sec</p>
+						</div>
+					</div>
 				</div>
-				<div className="countdown__timer">
-					<div className="countdown__timer--card">
-						<p className="countdown__timer--number">{timerDays}</p>
-						<p className="countdown__timer--desc">days</p>
-					</div>
-					<div className="countdown__timer--card">
-						<p className="countdown__timer--number">{timerHours}</p>
-						<p className="countdown__timer--desc">hours</p>
-					</div>
-					<div className="countdown__timer--card">
-						<p className="countdown__timer--number">{timerMinutes}</p>
-						<p className="countdown__timer--desc">min</p>
-					</div>
-					<div className="countdown__timer--card">
-						<p className="countdown__timer--number">{timerSeconds}</p>
-						<p className="countdown__timer--desc">sec</p>
-					</div>
+				<div className="countdown__button">
+					<Button className="btn hero--btn" buttonStyle="btn--primary" buttonSize="btn--desktop">
+						Get Started
+					</Button>
 				</div>
 			</div>
 		</section>
