@@ -1,6 +1,6 @@
 import { Button } from '../button';
 
-export default function homePlans() {
+const homePlans = () => {
 	return (
 		<section className="plans container">
 			<div className="plans__inner">
@@ -46,4 +46,6 @@ export default function homePlans() {
 			</div>
 		</section>
 	);
-}
+};
+
+export default homePlans;

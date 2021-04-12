@@ -4,7 +4,7 @@ import CountDown from '../components/home/homeCountDown';
 
 export default function Homepage() {
 	return (
-		<main className="main bg">
+		<main className="main">
 			<Hero />
 			<Plans />
 			<CountDown />
