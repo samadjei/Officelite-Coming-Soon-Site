@@ -1,11 +1,11 @@
 import SignUpHero from '../components/signup/signUpHero';
-import HomeCountDown from '../components/home/homeCountDown';
+// import signUpCountDown from '../components/signup/signupCountdown';
 
 const singUp = () => {
 	return (
 		<div>
 			<SignUpHero />
-			<HomeCountDown/>
+			{/* <signUpCountDown /> */}
 		</div>
 	);
 };
