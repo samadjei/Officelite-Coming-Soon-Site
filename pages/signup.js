@@ -1,11 +1,12 @@
+import SignUpBackground from '../components/signup/signupBackground';
 import SignUpHero from '../components/signup/signUpHero';
 // import signUpCountDown from '../components/signup/signupCountdown';
 
 const singUp = () => {
 	return (
-		<div>
+		<div className="signup">
 			<SignUpHero />
-			{/* <signUpCountDown /> */}
+			<SignUpBackground />
 		</div>
 	);
 };

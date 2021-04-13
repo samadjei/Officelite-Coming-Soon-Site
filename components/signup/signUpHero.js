@@ -51,8 +51,7 @@ const signUpHero = () => {
 	});
 
 	return (
-		<section className="signup">
-			<div className="signup__background"></div>
+		<section className="signups">
 			<div className="container">
 				<div className="signup__inner">
 					<div className="signup__content">
