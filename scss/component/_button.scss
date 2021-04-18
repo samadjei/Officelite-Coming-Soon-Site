@@ -2,6 +2,7 @@
 
 // Base Button Styling
 .btn {
+	display: inline-block;
 	font-weight: 700;
 	border-radius: 2.8rem;
 	outline: none;
@@ -55,6 +56,9 @@
 
 // Desktop Button
 .btn--desktop {
-	padding: 1.4rem 4.1rem;
+	width: 17.1rem;
+	height: 5.6rem;
+	margin: 0 auto;
+	// padding: 1.4rem 4.1rem;
 	font-size: 1.6rem;
 }

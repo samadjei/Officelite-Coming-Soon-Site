@@ -14,7 +14,6 @@ export default function homeHero() {
 					</Button>
 				</Link>
 			</div>
-
 			<div className="hero__image">
 				<Image src="/assets/home/illustration-charts.svg" height={531} width={475} alt="Illustration Chart" />
 			</div>

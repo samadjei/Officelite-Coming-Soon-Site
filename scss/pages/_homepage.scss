@@ -40,9 +40,14 @@
 	align-items: center;
 	&__content {
 		max-width: 54rem;
+		width: 100%;
 		height: 38.8rem;
 		text-align: left;
 		z-index: 1;
+
+		@include media('<=tablet') {
+			max-width: 34.5rem;
+		}
 	}
 	&--title {
 		margin: 0;
@@ -56,6 +61,10 @@
 	// puts image over the background image
 	&__image {
 		z-index: 1;
+		@include media('<=tablet') {
+			max-width: 28.1rem;
+			width: 100%;
+		}
 	}
 }
 
@@ -64,9 +73,14 @@
 	padding-top: 18rem;
 	padding-bottom: 5rem;
 	&__inner {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		justify-content: center;
 		align-items: center;
+		@include media('<=desktop') {
+			grid-template-columns: 1fr;
+		}
+		grid-gap: 2rem;
 		border-radius: 1.3rem;
 	}
 
@@ -74,7 +88,6 @@
 		background-color: $white;
 		box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.25);
 		border-radius: 1.3rem;
-		margin-right: 3rem;
 	}
 
 	&__pro {
@@ -109,18 +122,27 @@
 
 	&__ultimate {
 		background-color: $white;
-
 		border-radius: 1.3rem;
 		box-shadow: 0 5rem 5rem -2.5rem rgba(75, 92, 154, 0.25);
-		margin-left: 3rem;
 	}
 
 	&--card {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
+		display: grid;
+		justify-content: center;
+		align-content: center;
 		max-width: 35rem;
+		text-align: center;
+		background-color: pink;
+		@include media('<=desktop') {
+			max-width: 68rem;
+			width: 100%;
+			margin: 0 auto;
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: space-between;
+			grid-template-rows: 1fr;
+			text-align: left;
+			padding: 4.8rem 4.8rem;
+		}
 		height: 100%;
 		padding: 4rem 6.4rem;
 		z-index: 999;
@@ -128,11 +150,17 @@
 
 	&--type {
 		font-size: 2rem;
+		@include media('<=desktop') {
+			grid-row: 1 / 1;
+		}
 	}
 
 	&--price {
 		font-size: 5.6rem;
 		padding-top: 4rem;
+		@include media('<=desktop') {
+			grid-row: 1 / 1;
+		}
 	}
 
 	&--billing {
@@ -149,18 +177,28 @@
 		p:nth-child(2) {
 			padding-bottom: 1.6rem;
 		}
+		@include media('<=desktop') {
+			text-align: left;
+		}
 	}
 }
 
 // COUNTDOWN
 .countdown {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: $darkBlue;
 	margin-top: -25rem;
 	padding-top: 35rem;
 	padding-bottom: 9rem;
 	height: 60rem;
 	overflow: hidden;
+	@include media('<=desktop') {
+		height: 98.6rem;
+		margin-top: -60rem;
+	}
 
 	&::before {
 		content: '';
@@ -189,6 +227,11 @@
 		color: $white;
 	}
 
+	&__day {
+		@include media('<=desktop') {
+			margin: 0 auto;
+		}
+	}
 	&--days {
 		color: $blue;
 	}
@@ -199,6 +242,9 @@
 		grid-gap: 1.6rem;
 		justify-content: center;
 		align-items: center;
+		@include media('<=desktop') {
+			margin-bottom: 4.8rem;
+		}
 		&--card {
 			padding: 1.6rem;
 			background-color: $darkGrey;
@@ -231,4 +277,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include media('<=desktop') {
+		height: 100%;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		max-width: 44.8rem;
+		// width: 100%;
+		text-align: center;
+	}
 }
