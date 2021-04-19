@@ -5,6 +5,9 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	@include media('<=phone') {
+		justify-content: center;
+	}
 }
 
 // Background Pattern
@@ -24,6 +27,12 @@
 		top: -60rem;
 		left: 48%;
 		z-index: 0;
+		@include media('<=phone') {
+			width: 45.8rem;
+			height: 45.8rem;
+			left: 4rem;
+			top: -25rem;
+		}
 	}
 }
 
@@ -39,6 +48,10 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-bottom: 8rem;
+	@include media('<=phone') {
+		flex-direction: column-reverse;
+		padding-bottom: 4rem;
+	}
 	&__content {
 		max-width: 54rem;
 		width: 100%;
@@ -48,7 +61,10 @@
 
 		@include media('<=tablet') {
 			max-width: 34.5rem;
-			height: 34.9rem;
+			height: 35.2rem;
+		}
+		@include media('<=phone') {
+			text-align: center;
 		}
 	}
 	&--title {
@@ -56,8 +72,11 @@
 	}
 	&--para {
 		padding-top: 2.4rem;
-		padding-right: 4rem;
+		padding-right: 3.4rem;
 		padding-bottom: 3.2rem;
+		@include media('<=phone') {
+			padding-right: 0rem;
+		}
 	}
 
 	// puts image over the background image
@@ -72,8 +91,11 @@
 
 //PLANS
 .plans {
-	padding-top: 18rem;
+	padding-top: 10rem;
 	padding-bottom: 5rem;
+	@include media('<=desktop') {
+		padding-top: 6rem;
+	}
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -82,6 +104,7 @@
 		@include media('<=desktop') {
 			grid-template-columns: 1fr;
 		}
+
 		grid-gap: 2rem;
 		border-radius: 1.3rem;
 	}
@@ -108,6 +131,15 @@
 			height: 88rem;
 			top: -40rem;
 			z-index: -1;
+			left: -27rem;
+			@include media('<=desktop') {
+				top: -25rem;
+				left: -33rem;
+			}
+			@include media('<=phone') {
+				top: -38rem;
+				left: -27rem;
+			}
 		}
 
 		.head--white {
@@ -131,20 +163,37 @@
 		align-content: center;
 		max-width: 35rem;
 		text-align: center;
-		box-shadow: 0 5rem 5rem -2.5rem rgba(75,92,154,.25);
+		// box-shadow: 0 5rem 5rem -2.5rem rgba(75,92,154,.25);
+		height: 100%;
+		padding: 4rem 6.4rem;
+		z-index: 999;
 		@include media('<=desktop') {
 			max-width: 68rem;
 			width: 100%;
 			margin: 0 auto;
 			grid-template-columns: repeat(2, 1fr);
-			justify-content: space-between;
+			justify-self: start;
+			align-items: center;
 			grid-template-rows: 1fr;
 			text-align: left;
 			padding: 4.8rem 4.8rem;
 		}
-		height: 100%;
-		padding: 4rem 6.4rem;
-		z-index: 999;
+		@include media('<=phone') {
+			max-width: 32.7rem;
+			width: 100%;
+			margin: 0 auto;
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+
+		.btn {
+			@include media('<=desktop') {
+				margin-right: 12rem;
+			}
+			@include media('<=phone') {
+				margin: 0 auto;
+			}
+		}
 	}
 
 	&--type {
@@ -179,6 +228,9 @@
 		@include media('<=desktop') {
 			text-align: left;
 		}
+		@include media('<=phone') {
+			text-align: center;
+		}
 	}
 }
 
@@ -198,6 +250,10 @@
 		height: 98.6rem;
 		margin-top: -60rem;
 	}
+	@include media('<=phone') {
+		height: 124.8rem;
+		margin-top: -85rem;
+	}
 
 	&::before {
 		content: '';
@@ -211,6 +267,37 @@
 		top: -60rem;
 		right: 34rem;
 		z-index: 0;
+		@include media('<=desktop') {
+			width: 145.4rem;
+			height: 145.4rem;
+			top: 3rem;
+			bottom: 0rem;
+			left: -25rem;
+		}
+		@include media('<=phone') {
+			top: 3rem;
+			left: -55rem;
+		}
+	}
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media('<=desktop') {
+			height: 100%;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			max-width: 44.8rem;
+			// width: 100%;
+			text-align: center;
+		}
+		@include media('<=phone') {
+			max-width: 32.8rem;
+			width: 100%;
+		}
 	}
 
 	&__inner {
@@ -253,12 +340,18 @@
 			max-width: 10rem;
 			height: 12.8rem;
 			z-index: 3;
+			@include media('<=phone') {
+				border-radius: 0.4rem;
+			}
 		}
 		&--number {
 			font-size: 5.6rem;
 			font-weight: 700;
 			line-height: 4.8rem;
 			color: $white;
+			@include media('<=phone') {
+				font-size: 3.2rem;
+			}
 		}
 
 		&--desc {
@@ -268,21 +361,9 @@
 			opacity: 0.5;
 			color: $white;
 			margin-top: 0.3rem;
+			@include media('<=phone') {
+				font-weight: 1.2rem;
+			}
 		}
-	}
-}
-
-.flex {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	@include media('<=desktop') {
-		height: 100%;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-		max-width: 44.8rem;
-		// width: 100%;
-		text-align: center;
 	}
 }

@@ -45,7 +45,7 @@ const homePlans = () => {
 						<p>100 GB storage</p>
 						<p>VIP support</p>
 					</div>
-					<Button className="btn" buttonStyle="btn--secondary" buttonSize="btn--desktop">
+					<Button className="btn plans__btn" buttonStyle="btn--secondary" buttonSize="btn--desktop">
 						Try for Free
 					</Button>
 				</div>

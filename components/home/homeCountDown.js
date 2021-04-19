@@ -54,7 +54,7 @@ const countDown = () => {
 	return (
 		<section className="countdown">
 			<div className="countdown__bg"></div>
-			<div className="container flex">
+			<div className="container countdown__flex">
 				<div className="countdown__inner">
 					{/* Set 30 days in the future from the moment the visitor views the page */}
 					<div className="countdown__day">

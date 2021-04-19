@@ -34,4 +34,8 @@ p {
 		font-size: 1.6rem;
 		line-height: 2.8rem;
 	}
+	@include media('<=phone') {
+		font-size: 1.6rem;
+		line-height: 2.6rem;
+	}
 }
