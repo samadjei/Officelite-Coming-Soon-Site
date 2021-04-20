@@ -1,49 +1,53 @@
-// Render Prop
-
 import React from 'react';
+import { Formik, useField } from 'formik';
+import * as Yup from 'yup';
 
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+const CustomTextInput = ({ label, ...props }) => {
+	const [field] = useField(props);
+
+	return (
+		<>
+			<label htmlFor={props.id || props.name}>{label}</label>
+			<input className="text-input" {...field} {...props} />
+		</>
+	);
+};
+
+const CustomChekbox = ({ label, ...props }) => {
+	const [field] = useField(props);
+
+	return (
+		<>
+			<label htmlFor={props.id || props.name}>{label}</label>
+			<input className="text-input" {...field} {...props} />
+		</>
+	);
+};
 
 const Basic = () => (
-	<div>
+	<section>
 		<Formik
-			initialValues={{ email: '', password: '' }}
-			validate={(values) => {
-				const errors = {};
-
-				if (!values.email) {
-					errors.email = 'Required';
-				} else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-					errors.email = 'Invalid email address';
-				}
-
-				return errors;
+			initialValues={{
+				name: '',
+				email: '',
+				plan: 'Basic Pack',
+				phoneNumber: '',
+				companyName: '',
 			}}
-			onSubmit={(values, { setSubmitting }) => {
+			validationSchema={Yup.object({
+				name: Yup.string().min(3, 'Must be at least 3 characters long').max(15, 'Must be 15 characters or less').required('Required'),
+				email: Yup.string().email('Invalid email address').required('Required'),
+				specialPower: Yup.string().oneOf(['Basic Pack Free', 'Pro Pack $9.99', 'Ultimate Pack $19.99']).required('Required'),
+			})}
+			onSubmit={(values, { setSubmitting, resetForm }) => {
 				setTimeout(() => {
 					alert(JSON.stringify(values, null, 2));
-
+					resetForm();
 					setSubmitting(false);
-				}, 400);
+				}, 3000);
 			}}
-		>
-			{({ isSubmitting }) => (
-				<Form >
-					<Field type="email" name="email" />
-
-					<ErrorMessage name="email" component="div" />
-
-					<Field type="password" name="password" />
-
-					<ErrorMessage name="password" component="div" />
-
-					<button type="submit" disabled={isSubmitting}>
-						Submit
-					</button>
-				</Form>
-			)}
-		</Formik>
-	</div>
+		></Formik>
+	</section>
 );
 
 export default Basic;
