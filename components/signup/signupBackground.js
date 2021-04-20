@@ -1,6 +1,6 @@
 const signUpBackground = () => {
 	return (
-		<section>
+		<section className="signbg">
 			<div className="signup__background"></div>
 		</section>
 	);

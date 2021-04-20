@@ -28,7 +28,7 @@ const Basic = () => (
 			}}
 		>
 			{({ isSubmitting }) => (
-				<Form>
+				<Form >
 					<Field type="email" name="email" />
 
 					<ErrorMessage name="email" component="div" />

@@ -1,7 +1,6 @@
 .signup {
 	position: relative;
-	height: 100vh;
-	overflow: hidden !important;
+
 	&__inner {
 		display: flex;
 		flex-direction: column;
@@ -67,19 +66,48 @@
 	}
 }
 
-.signups{
+.signups {
 	height: auto;
 }
 
+// .signup__background {
+// 	position: absolute;
+// 	right: 0;
+// 	top: -30rem;
+// 	width: 42rem;
+// 	background-repeat: no-repeat;
+// 	background-color: $darkGrey;
+// 	height: 1152px;
+// 	z-index: -1;
+// 	margin-top: -30rem;
+// }
+
 .signup__background {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 42rem;
-	background-repeat: no-repeat;
-	background-color: $darkGrey;
-	height: 1152px;
+	position: fixed;
+	height: 100%;
+	width: 350px;
 	z-index: -1;
-	margin-top: -30rem;
+	top: 0;
+	right: 0;
+	background-color: $darkGrey;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../../public/assets/sign-up/bg-pattern-side.svg');
+	background-position: -30rem -30rem;
 }
 
+// .signbg {
+// 	position: relative;
+// 	&:after {
+// 		content: '';
+// 		position: absolute;
+// 		background-size: cover;
+// 		background-repeat: no-repeat;
+// 		background-image: url('../../public/assets/sign-up/bg-pattern-side.svg');
+// 		background-position: left center;
+// 	}
+// }
+
+.form {
+	display: flex;
+}
