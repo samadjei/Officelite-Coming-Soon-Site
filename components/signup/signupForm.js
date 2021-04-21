@@ -1,5 +1,6 @@
 import React from 'react';
-import { Formik, useField } from 'formik';
+import Image from 'next/image';
+import { Formik, useField, Form } from 'formik';
 import * as Yup from 'yup';
 
 const CustomTextInput = ({ label, ...props }) => {
@@ -13,13 +14,13 @@ const CustomTextInput = ({ label, ...props }) => {
 	);
 };
 
-const CustomChekbox = ({ label, ...props }) => {
+const CustomSelect = ({ label, ...props }) => {
 	const [field] = useField(props);
 
 	return (
 		<>
 			<label htmlFor={props.id || props.name}>{label}</label>
-			<input className="text-input" {...field} {...props} />
+			<select className="select-input" {...field} {...props} />
 		</>
 	);
 };
@@ -46,7 +47,31 @@ const Basic = () => (
 					setSubmitting(false);
 				}, 3000);
 			}}
-		></Formik>
+		>
+			{(props) => (
+				<Form className="form-flex form-p">
+					<CustomTextInput name="name" type="text" placeholder="Name" />
+					<CustomTextInput name="email" type="email" placeholder="Email Address" />
+					<div className="selector">
+						<CustomSelect name="Plan">
+							<option className="form--plan" value="Basic Pack">
+								Basic Pack <span className="form--type">Free</span>
+							</option>
+							<option className="form--plan" value="Pro Pack">
+								Pro Pack <span className="form--type">$9.99</span>
+							</option>
+							<option className="form--plan" value="Ultimate Pack">
+								Ultimate Pack <span className="form--type">$19.99</span>
+							</option>
+						</CustomSelect>
+						<span className="custom--arrow"></span>
+					</div>
+					<CustomTextInput name="Phone Number" type="text" placeholder="Phone Number" />
+					<CustomTextInput name="Number" type="text" placeholder="Company" />
+					{/* <button type="submit">{props.isSubmitting ? 'Loading...' : 'Submit'}</button> */}
+				</Form>
+			)}
+		</Formik>
 	</section>
 );
 
